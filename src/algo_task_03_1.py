@@ -102,7 +102,7 @@ def main() -> None:
     # (шлях до вихідної директорії та директорії призначення)
     if len(sys.argv) < 3:
         print(
-            "Використання:  'python3 script.py <source_directory> <destination_directory>'"
+            "Використання:  'python3 algo_task_03_1.py <source_directory> <destination_directory>'"
         )
         return  # Завершуємо програму
 
