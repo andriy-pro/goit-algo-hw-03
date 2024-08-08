@@ -16,14 +16,16 @@ def koch_snowflake(side_length, level):
         turtle.forward(side_length)  # Малюємо пряму лінію для базового випадку
     else:
         side_length /= 3.0  # Ділимо довжину на три частини
+        next_level = level - 1  # Зменшуємо рівень рекурсії на одиницю
+
         # Рекурсивно малюємо кожну з чотирьох частин кривої Коха
-        koch_snowflake(side_length, level - 1)  # Ліва частина
+        koch_snowflake(side_length, next_level)  # Ліва частина
         turtle.left(60)  # Поворот на 60 градусів вліво
-        koch_snowflake(side_length, level - 1)  # Середня частина, піднята вгору
+        koch_snowflake(side_length, next_level)  # Середня частина, піднята вгору
         turtle.right(120)  # Поворот на 120 градусів вправо
-        koch_snowflake(side_length, level - 1)  # Середня частина, опущена вниз
+        koch_snowflake(side_length, next_level)  # Середня частина, опущена вниз
         turtle.left(60)  # Повертаємося назад на 60 градусів вліво
-        koch_snowflake(side_length, level - 1)  # Права частина
+        koch_snowflake(side_length, next_level)  # Права частина
 
 
 def draw_koch_snowflake(side_length, level):
